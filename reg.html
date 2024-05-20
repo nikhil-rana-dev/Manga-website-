@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Product - Mangakaka</title>
+    <!-- this is google font  -->
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <a href="index.html">
+                     <img src="New logo 2.png" width="300px">
+                   </a>
+                </div>
+                <nav>
+                    <ul id="MenuItems">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="product.html">Product</a></li>
+                        <li><a href="reg.html">Account</a></li>
+                        <li><a href="merchandise.html">Merchandise</a></li>
+                    </ul>
+                </nav>
+                <img src="new add cart.png" width="30px" height="30px">
+                <img src="menu.png" class="menu-icon" onclick="menutoggle()"><!--menu toggle help to display an option that the user can enable or disable--->
+            </div>
+        </div>
+    </div>
+   <!-- account page -->
+   <div id="account-page">
+    <div class="container">
+        <div class="row">
+            <div class="col-2">
+                <img src="shadow box.png" width="100%">
+            </div>
+            <div class="col-2">
+                <div id="form-container">
+                    <div id="form-btn">
+                        <span onclick="login()">Login</span>
+                        <span onclick="register()">Register</span>
+                        <hr id="indicator">
+                    </div>
+                    <form id="LoginForm">
+                        <input type="text" placeholder="User-name">
+                        <input type="Password" placeholder="Password">
+                        <button type="submit" class="btn">Login</button>
+                        <a href="">Forget Password</a>
+                    </form>
+                    <form id="RegForm">
+                        <input type="text" placeholder="User-name">
+                        <input type="email" placeholder="Email">
+                        <input type="Password" placeholder="Password">
+                        <button type="submit" class="btn">Register</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+   </div>
+    <!---footer for manga website-->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Download Our App</h3>
+                    <p>Download App for Android and IOS mobile</p>
+                    <div class="app-logo">
+                        <img src="app-store.png">
+                        <img src="play-store.png">
+                    </div>
+                </div>
+                <div class="footer-col-2">
+                    <img src="New logo 2.png">
+                    <p>Download App for Android and IOS mobile</p>
+                    <p>Discover Endless Adventures with Mangakaka -
+                         Your Gateway to the Manga World!</p>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Useful links</h3>
+                    <ul>
+                        <li>Coupons</li>
+                        <li>Post</li>
+                        <li>Return Policy</li>
+                        <li>Afiliated sites</li>
+                    </ul>
+                </div>
+                <div class="footer-col-4">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Twitter</li>
+                        <li>Instagram</li>
+                        <li>Youtube</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!--------JS For Toggle Menu-->
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+        MenuItems.style.maxHeight = "0px";
+        function menutoggle(){
+            if(MenuItems.style.maxHeight == "0px")
+            {
+                MenuItems.style.maxHeight = "200px";
+            }
+            else{
+                MenuItems.style.maxHeight = "0px";
+            }
+        }
+    </script>
+    <!-- js for product gallary -->
+    <!-- js for product gallery -->
+<script>
+    var productImg = document.getElementById("productImg");
+    var SmallImg = document.getElementsByClassName("small-img");
+
+    SmallImg[0].onclick = function() {
+        productImg.src = SmallImg[0].src;
+    }
+    SmallImg[1].onclick = function() {
+        productImg.src = SmallImg[1].src;
+    }
+    SmallImg[2].onclick = function() {
+        productImg.src = SmallImg[2].src;
+    }
+    SmallImg[3].onclick = function() {
+        productImg.src = SmallImg[3].src;
+    }
+    SmallImg[3].onclick = function() {
+        productImg.src = SmallImg[3].src;
+    }
+</script>
+<!-- JS FOR TOGGLE FORM -->
+<script>
+    var LoginForm = document.getElementById("LoginForm");
+    var RegForm = document.getElementById("RegForm");
+    var indicator = document.getElementById("indicator");
+
+    function register(){
+        RegForm.style.transform = "translateX(0px)";
+        LoginForm.style.transform = "translateX(0px)";
+        indicator.style.transform = "translateX(100px)";
+    }
+    function login(){
+        RegForm.style.transform = "translateX(300px)";
+        LoginForm.style.transform = "translateX(300px)";
+        indicator.style.transform = "translateX(0px)";
+    }
+</script>
+
+        
+    
+</body>
+</html>
